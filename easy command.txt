@@ -1,0 +1,26 @@
+download Anaconda in Linux:
+
+curl -O https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+
+
+
+
+How to use:
+
+Keras models can be saved as a single [.hdf5 or h5] file, which stores both the architecture and weights, using the model.save() function. This model can be then converted to a TensorFlow model by calling this tool as follows:
+
+python keras_to_tensorflow.py 
+    --input_model="path/to/keras/model.h5" 
+    --output_model="path/to/save/model.pb"
+
+Keras models can also be saved in two separate files where a [.hdf5 or h5] file stores the weights, using the model.save_weights() function, and another .json file stores the network architecture using the model.to_json() function. In this case, the model can be converted as follows:
+
+python keras_to_tensorflow.py 
+    --input_model="path/to/keras/model.h5" 
+    --input_model_json="path/to/keras/model.json" 
+    --output_model="path/to/save/model.pb"
+
+
+
+e.g.
+utils/keras_to_tensorflow.py -input_model_file models/fashion_mnist.h5 -output_model_file models/fashion_mnist.h5.pb
