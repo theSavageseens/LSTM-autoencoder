@@ -1,2 +1,3 @@
 # LSTM-autoencoder
-This is a School project, I have upload on the end of May for the first time, if it help you, feel free to take it. 
+The purpose of this project is to implement a distributed version of LSTM Autoencoder using GPU. LSTM autoencoder is a part of a bigger model LSTM-Node2vec that is implemented and submitted for publication. LSTM-Node2vec model is a neural network model for graph embedding that can be used to represent graphs in different data mining tasks including link prediction, anomaly detection and node classification and outperforms state-of-the-art models in most of the cases.
+We are interested in having a distributed implementation of this model. LSTM-Node2vec consists of two part: LSTM-autoencoder and Node2vec. In this project our goal is to implement the LSTM-autoencoder component. Below, we describe LSTM autoencoder structure and its training.
